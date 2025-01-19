@@ -1,0 +1,19 @@
+﻿@model IEnumerable<VideoLink>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Description</th>
+        <th>Posted Date</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td><a href="@item.Url" target="_blank">Watch</a></td>
+            <td>@item.Description</td>
+            <td>@item.PostedDate</td>
+        </tr>
+    }
+</table>
